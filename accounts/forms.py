@@ -41,7 +41,7 @@ class ProfileForm(forms.ModelForm):
         widgets = {
             'image': forms.FileInput(attrs={
                 'id': 'id_profile_image',
-                'class': 'd-none',  # Hide file insdsdsdsdsdput, can be triggered with JavaScript
+                'class': 'd-none',  # Hide file inputs, can be triggered with JavaScript
             }),
         }
 
