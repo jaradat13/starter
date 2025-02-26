@@ -40,7 +40,7 @@ This repository contains a robust Django starter project designed to provide a s
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/starter.git
+   git clone https://github.com/jaradat13/starter.git
    cd starter
 
 2. **Create and activate a virtual environment:**
