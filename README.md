@@ -1,3 +1,1 @@
-# starter
-# base
-# starter
+# django starter template, with all-auth
