@@ -24,7 +24,6 @@ This repository contains a robust Django starter project designed to provide a s
   - The `.env` file and other development artifacts (like `db.sqlite3` and virtual environment directories) are excluded from version control via `.gitignore`.
 
 - **Development Tools & Workflow**
-  - Configured for smooth integration with PyCharm.
   - SQLite3 is used as the default development database for easy setup.
   - Ready-to-use Git configuration for collaborative development.
 
