@@ -32,8 +32,8 @@ This repository contains a robust Django starter project designed to provide a s
 
 ### Prerequisites
 
-- Python 3.8+
-- [pip](https://pip.pypa.io/)
+- Python 3.8+  
+- [pip](https://pip.pypa.io/)  
 - [virtualenv](https://virtualenv.pypa.io/)
 
 ### Installation
@@ -43,8 +43,34 @@ This repository contains a robust Django starter project designed to provide a s
    ```bash
    git clone https://github.com/yourusername/starter.git
    cd starter
-Create and activate a virtual environment:
 
-bash
-Copy
-Edit
+2. **Create and activate a virtual environment:**
+    ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+
+3. **Install dependencies:**
+    ```bash
+   pip install -r requirements.txt
+
+4. **Set up your environment variables:**
+Create a .env file in the root of the project and add your settings:
+
+    ```bash
+    DJANGO_SECRET_KEY=your-secret-key
+    DJANGO_DEBUG=True
+    ALLOWED_HOSTS=localhost,127.0.0.1
+    GOOGLE_CLIENT_ID=your-google-client-id
+    GOOGLE_CLIENT_SECRET=your-google-client-secret
+
+
+5. **Apply database migrations:**
+
+    ```bash
+    python manage.py migrate
+
+6. **Run the development server:**
+    ```bash
+   python manage.py runserver
+
