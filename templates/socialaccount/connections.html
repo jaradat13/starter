@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n socialaccount %}
+
+{% block content %}
+  <h2>{% trans "Connected Accounts" %}</h2>
+
+  {% if form.accounts %}
+    <ul>
+      {% for account in form.accounts %}
+        <li>
+          {{ account.get_provider.name }}
+          <form method="post" action="{% url 'socialaccount_connections' %}">
+            {% csrf_token %}
+            <input type="hidden" name="account" value="{{ account.id }}">
+            <button type="submit">{% trans "Disconnect" %}</button>
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>{% trans "No connected accounts." %}</p>
+  {% endif %}
+
+  <h3>{% trans "Connect a New Account" %}</h3>
+  <a href="{% provider_login_url 'google' %}">Connect with Google</a>
+{% endblock %}

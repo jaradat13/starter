@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% trans "Complete Your Signup" %}</h2>
+  <p>{% trans "Almost there! Just fill in the details below to finish signing up." %}</p>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% trans "Finish Signup" %}</button>
+  </form>
+{% endblock %}
